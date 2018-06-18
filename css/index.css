@@ -95,39 +95,38 @@ tr{
 
 label{
 	color: #555;
-	display: inline;
 	margin: 1em;
 	font-weight: bold;
-	
-}
-
-.lupa-icon{
-	top: 10em;
-	position: absolute;
-	height: 2em;
-	padding: 2px;
-	border-radius: 7px;
-	box-shadow: 1px 1px #000;
-}
-.lupa-icon:hover{
-	opacity: 1;
 }
 
 #filtrar-tabela{
 	position: relative;
-	border-radius: 7px;
+	border-radius: 25px;
 	border: none;
-	box-shadow: 1px 1px #000;
-	padding: 10px 0px;
+	box-shadow: 1px 1px 5px #000;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 3em;
 	margin-bottom: 25px;
-	width: 3em;
-	transition: .4s;
-	opacity: 0;
+	width: auto;
+	transition: .7s;
 }
+#filtrar-tabela:focus,	
 #filtrar-tabela:hover{
-	width: 20em;
-	opacity: 1;
+	box-shadow: 3px 3px 10px #000;
 }
+
+label[for="filtrar-tabela"]::after{
+	content: '';
+	margin-left: 1em;
+	z-index: 1;
+	background-image: url(/img/lupa-icon.png);
+	position: absolute;
+	width: 2.2em;
+	height: 2.2em;
+	background-size: 100%;
+}
+
 
 .campo{
 	margin: 5px;
@@ -137,6 +136,9 @@ label{
 	padding: .7em;
 	width: 100%;
 	border-radius: 5px;
+}
+.campo:focus{
+	box-shadow: 1px 1px 2px rgb(70, 150, 75);
 }
 
 .campo-medio{
@@ -149,6 +151,7 @@ label{
 	display: block;
 	padding: 10px 0px;
 }
+
 
 .obs{
 	color: rgb(85, 100, 70);
@@ -172,6 +175,7 @@ label{
 	width: 100%;
 	text-align: center;
 }
+#buscar-pacientes:focus,
 #buscar-pacientes:hover{
 	background-color:rgb(115, 195, 120);
 }
@@ -182,9 +186,10 @@ label{
 }
 
 #adicionar-paciente{
+	position: relative;
 	margin-top: 1em;
 	margin-bottom: 1em;
-	position: relative;
+	margin-left: 86%;
 	font-size: 1.2em;
 	height: 2em;
 	padding: .5em;
@@ -196,13 +201,15 @@ label{
 	background-color:rgb(70, 150, 75);
 	border-color: rgb(60, 90, 60);
 	transition: 1s;
-	left: 90%;
+
 }
+#adicionar-paciente:focus,
 #adicionar-paciente:hover{
-	background-color:rgb(115, 195, 120);
+	
 	box-shadow: 2px 2px rgb(85, 100, 70);
 }
 #adicionar-paciente:active{
+	background-color:rgb(115, 195, 120);
 	box-shadow: none;
 	transition: 0s;
 }
@@ -240,16 +247,14 @@ label{
 	display: none;
 }
 
-::placeholder{
-	margin-left: 3px;
-}
-
 footer{
 	background-color: rgba(0, 0, 0, .1);
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
 }
 
 footer p{
-	position: relative;
 	text-align: center;
 	padding: 6px;
 }
