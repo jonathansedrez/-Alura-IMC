@@ -1,0 +1,32 @@
+label{
+	color: #555;
+	margin: 1em;
+	font-weight: bold;
+}
+#filtrar-tabela{
+	position: relative;
+	border-radius: 25px;
+	border: none;
+	box-shadow: 1px 1px 5px #000;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 3em;
+	margin-bottom: 25px;
+	width: auto;
+    transition: .7s;
+    
+    &:focus,	
+    &:hover{
+	box-shadow: 3px 3px 10px #000;
+    }
+}
+label[for="filtrar-tabela"]::after{
+	content: '';
+	margin-left: 1em;
+	z-index: 1;
+	background-image: url(/img/lupa-icon.png);
+	position: absolute;
+	width: 2.2em;
+	height: 2.2em;
+	background-size: 100%;
+}

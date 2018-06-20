@@ -1,0 +1,53 @@
+fieldset{
+    border: 1px solid #ccc;
+	margin-bottom: 4em;
+	padding: 0 1em;
+	border-radius: 7px;
+}
+
+.input-form{
+	margin: 5px;
+	padding-bottom: 1em;
+	width: 100%;
+	border: 1px solid #ccc;
+	padding: .7em;
+	width: 100%;
+    border-radius: 5px;
+    
+    &:focus{
+        box-shadow: 2px 2px 5px $verde-claro;
+    }
+}
+.grupo{
+	width: 98%;
+	display: block;
+	padding: 10px 0px;
+}
+
+#adicionar-paciente{
+    position: relative;
+    float: right;
+    margin: 1em;
+	font-size: 1.2em;
+	height: 2em;
+	padding: .5em;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	box-shadow: 5px 5px $border-color;
+	color: #fff;
+	background-color:$verde-base;
+	border-color: $border-color;
+	transition: 1s;
+
+    &:focus,
+    &:hover{
+        background-color: $verde-claro;
+	    box-shadow: 2px 2px $border-color;
+    }
+    &:active{
+        background-color:$verde-claro;
+        box-shadow: none;
+        transition: 0s;
+    }
+}

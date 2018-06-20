@@ -1,0 +1,29 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+main{
+    background-color: $main-background;
+}
+
+.container{
+	width: 75%;
+	height: 100%;
+    margin: 0 auto;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    background-color: #fff;
+    
+    h2{
+        font-size: 3em;
+        display: block;
+        padding-bottom: .5em;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: .5em;
+    }
+}

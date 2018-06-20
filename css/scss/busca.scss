@@ -1,0 +1,26 @@
+#buscar-pacientes{
+	padding: .5em 2em;
+	border: none;
+	border-bottom: 4px solid;
+	font-size: 1.2em;
+	cursor: pointer;
+	margin-top: -3px;
+	color: #fff;
+	background-color:$verde-base;
+	border-color: $border-color;
+  	display: block;
+  	margin: 10px 0px;
+	border-radius: 5px;
+	width: 100%;
+	text-align: center;
+
+    &:focus,
+    &:hover{
+        background-color:$verde-claro;
+    }
+    &:active{
+        border-radius: 8px;
+        border-top: 4px solid;
+        border-bottom: none;
+    }
+}
