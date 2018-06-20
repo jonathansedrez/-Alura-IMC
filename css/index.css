@@ -1,260 +1,202 @@
-*{
-	box-sizing: border-box;
- }
+/*Structure*/
+* {
+  box-sizing: border-box; }
 
-body{
-	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-	font-size: 16px;
-	font-family: 'Open Sans Condensed', sans-serif;
-}
+body {
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-family: 'Open Sans Condensed', sans-serif; }
 
+.container {
+  width: 75%;
+  height: 100%;
+  margin: 0 auto; }
+  .container h2 {
+    font-size: 3em;
+    display: block;
+    padding-bottom: .5em;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: .5em; }
 
-header{
-	background-color: #333;
-	height: 3em;
-	color: #FFF;
-	margin-bottom: 1em;
-}
+/*Filtro*/
+label {
+  color: #555;
+  margin: 1em;
+  font-weight: bold; }
 
-header h1{
-	font-size: 2em;
-	display:inline-block;
-	vertical-align:	middle;
-}
-header h2{
-	font-size: 2em;
-	display:inline-block;
-	vertical-align:	middle;
-	position: absolute;
-	left: 2%;
-	top:1%;
-}
+#filtrar-tabela {
+  position: relative;
+  border-radius: 25px;
+  border: none;
+  box-shadow: 1px 1px 5px #000;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 3em;
+  margin-bottom: 25px;
+  width: auto;
+  transition: .7s; }
+  #filtrar-tabela:focus, #filtrar-tabela:hover {
+    box-shadow: 3px 3px 10px #000; }
 
-header .container:before{
-	content: '';
-	display:inline-block;
-	height: 100%;
-	vertical-align:	middle;
-}
+label[for="filtrar-tabela"]::after {
+  content: '';
+  margin-left: 1em;
+  z-index: 1;
+  background-image: url(/img/lupa-icon.png);
+  position: absolute;
+  width: 2.2em;
+  height: 2.2em;
+  background-size: 100%; }
 
-.container{
-	width: 70%;
-	height: 100%;
-	margin: 0 auto;
-}
+/*Header*/
+header {
+  background-color: #333;
+  height: 3em;
+  color: #FFF;
+  margin-bottom: 1em; }
+  header h1 {
+    font-size: 2em;
+    display: inline-block;
+    vertical-align: middle; }
+  header h2 {
+    font-size: 2em;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    left: 2%;
+    top: 1%; }
+  header:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle; }
 
-section{
-	margin: 2em 0;
-	overflow: hidden;
-}
-
-section h2{
-	font-size: 3em;
-	display: block;
-	padding-bottom: .5em;
-	border-bottom: 1px solid #ccc;
-	margin-bottom: .5em;
-}
-
-#titulo-form{
-	margin-top: 60px;
-	padding-top: 8px;
-}
-
-#form-adiciona{
-	border: 1px solid #ccc;
-	margin-bottom: 4em;
-	padding-left: 1em;
-	border-radius: 7px;
-}
-
-table{
-	width: 100%;
-	margin-bottom : .5em;
-	table-layout: fixed;
-}
-
-td, th {
-	padding: .7em;
-	margin: 0;
-	border: 1px solid #ccc;
-	text-align: center;
-}
-
-th{
-	font-weight: bold;
-	background-color: rgb(70, 150, 75);
-	color: white;
-	border: 2px solid white;
-	border-radius: 8px;
-}
-tr{
-	border: solid .5px rgb(172, 179, 171);
-	height: 2em;
-}
-
-label{
-	color: #555;
-	margin: 1em;
-	font-weight: bold;
-}
-
-#filtrar-tabela{
-	position: relative;
-	border-radius: 25px;
-	border: none;
-	box-shadow: 1px 1px 5px #000;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 3em;
-	margin-bottom: 25px;
-	width: auto;
-	transition: .7s;
-}
-#filtrar-tabela:focus,	
-#filtrar-tabela:hover{
-	box-shadow: 3px 3px 10px #000;
-}
-
-label[for="filtrar-tabela"]::after{
-	content: '';
-	margin-left: 1em;
-	z-index: 1;
-	background-image: url(/img/lupa-icon.png);
-	position: absolute;
-	width: 2.2em;
-	height: 2.2em;
-	background-size: 100%;
-}
-
-
-.campo{
-	margin: 5px;
-	padding-bottom: 1em;
-	width: 100%;
-	border: 1px solid #ccc;
-	padding: .7em;
-	width: 100%;
-	border-radius: 5px;
-}
-.campo:focus{
-	box-shadow: 1px 1px 2px rgb(70, 150, 75);
-}
-
-.campo-medio{
-	display: inline-block;
-	padding-right: .5em;
-}
-
-.grupo{
-	width: 98%;
-	display: block;
-	padding: 10px 0px;
-}
-
-
-.obs{
-	color: rgb(85, 100, 70);
-	font-size: 14px;
-	text-align: right;
-}
-
-#buscar-pacientes{
-	padding: .5em 2em;
-	border: none;
-	border-bottom: 4px solid;
-	font-size: 1.2em;
-	cursor: pointer;
-	margin-top: -3px;
-	color: #fff;
-	background-color:rgb(70, 150, 75);
-	border-color: rgb(60, 90, 60);
-  	display: block;
-  	margin: 10px 0px;
-	border-radius: 5px;
-	width: 100%;
-	text-align: center;
-}
-#buscar-pacientes:focus,
-#buscar-pacientes:hover{
-	background-color:rgb(115, 195, 120);
-}
-#buscar-pacientes:active{
-	border-radius: 8px;
-	border-top: 4px solid;
-	border-bottom: none;
-}
-
-#adicionar-paciente{
-	position: relative;
-	margin-top: 1em;
-	margin-bottom: 1em;
-	margin-left: 86%;
-	font-size: 1.2em;
-	height: 2em;
-	padding: .5em;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	box-shadow: 5px 5px rgb(85, 100, 70);
-	color: #fff;
-	background-color:rgb(70, 150, 75);
-	border-color: rgb(60, 90, 60);
-	transition: 1s;
-
-}
-#adicionar-paciente:focus,
-#adicionar-paciente:hover{
-	
-	box-shadow: 2px 2px rgb(85, 100, 70);
-}
-#adicionar-paciente:active{
-	background-color:rgb(115, 195, 120);
-	box-shadow: none;
-	transition: 0s;
-}
-
-.adicionar-paciente{
-    margin-top: 30px;
-}
-
-.campo-invalido{
-	border: 1px solid red;
-}
-
-#mensagens-erro{
+/*Table*/
+table {
+  width: 100%;
+  margin-bottom: .5em;
+  table-layout: fixed; }
+  table td, table th {
+    padding: .7em;
+    margin: 0;
+    border: 1px solid #ccc;
+    text-align: center; }
+  table th {
+    font-weight: bold;
+    background-color: #46964b;
     color: white;
-    background-color: rgba(231, 50, 50, .6);
-	margin: 6px;
-	padding: 6px;
-	border-radius: 7px;
-	margin-bottom: 20px;
-	display: block;
-	animation: fadeIn .6s ease-in;
-}
+    border: 2px solid white;
+    border-radius: 8px; }
+  table tr {
+    border: solid 0.5px #acb3ab;
+    height: 2em; }
 
+.obs {
+  color: #556446;
+  text-align: right; }
+
+/*Buscar*/
+#buscar-pacientes {
+  padding: .5em 2em;
+  border: none;
+  border-bottom: 4px solid;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-top: -3px;
+  color: #fff;
+  background-color: #46964b;
+  border-color: #3c5a3c;
+  display: block;
+  margin: 10px 0px;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center; }
+  #buscar-pacientes:focus, #buscar-pacientes:hover {
+    background-color: #73c378; }
+  #buscar-pacientes:active {
+    border-radius: 8px;
+    border-top: 4px solid;
+    border-bottom: none; }
+
+/*Form*/
+fieldset {
+  border: 1px solid #ccc;
+  margin-bottom: 4em;
+  padding: 0 1em;
+  border-radius: 7px; }
+
+.input-form {
+  margin: 5px;
+  padding-bottom: 1em;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: .7em;
+  width: 100%;
+  border-radius: 5px; }
+  .input-form:focus {
+    box-shadow: 2px 2px 5px #73c378; }
+
+.grupo {
+  width: 98%;
+  display: block;
+  padding: 10px 0px; }
+
+#adicionar-paciente {
+  position: relative;
+  float: right;
+  margin: 1em;
+  font-size: 1.2em;
+  height: 2em;
+  padding: .5em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 5px 5px #3c5a3c;
+  color: #fff;
+  background-color: #46964b;
+  border-color: #3c5a3c;
+  transition: 1s; }
+  #adicionar-paciente:focus, #adicionar-paciente:hover {
+    background-color: #73c378;
+    box-shadow: 2px 2px #3c5a3c; }
+  #adicionar-paciente:active {
+    background-color: #73c378;
+    box-shadow: none;
+    transition: 0s; }
+
+/*Erro*/
+#mensagens-erro {
+  color: white;
+  background-color: rgba(231, 50, 50, 0.6);
+  font-size: 1.2em;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  display: block;
+  animation: fadeIn .6s ease-in; }
+
+/*Delete*/
 .fadeOut {
-    opacity: 0;
-    transition: 0.5s;
-}
+  opacity: 0;
+  transition: 0.5s; }
 
 @keyframes fadeIn {
-	0% { opacity: 0; }
-	100% { opacity: 1; }
-}
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+.invisivel {
+  display: none; }
 
-.invisivel{
-	display: none;
-}
+/*Footer*/
+footer {
+  background-color: rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 0px;
+  width: 100%; }
+  footer p {
+    text-align: center;
+    padding: 6px; }
 
-footer{
-	background-color: rgba(0, 0, 0, .1);
-	position: fixed;
-	bottom: 0px;
-	width: 100%;
-}
-
-footer p{
-	text-align: center;
-	padding: 6px;
-}
+/*# sourceMappingURL=index.css.map */

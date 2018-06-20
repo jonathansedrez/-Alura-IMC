@@ -6,13 +6,12 @@
 		<link rel="icon" href="img/favicon.png" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
 		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/media-query.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 	</head>
 	<body>
 		<header>
-			<div class="container">
-				<h2 class="titulo">Aparecida Nutrição</h2>z
-			</div>
+				<h2 class="titulo">Aparecida Nutrição</h2>
 		</header>
 		<main>
 			<section class="container">
@@ -71,30 +70,32 @@
 				<!--Botão para buscar um JSON-->
 				<span id="erro-ajax" class="invisivel">Erro ao buscar os pacientes</span>
 				<button id="buscar-pacientes" class="botao bto-principal">Buscar pacientes</button>
-				<!--Formulário-->
+				<!--Formulário-->				
 				<h2 id="titulo-form">Adicionar novo paciente</h2>
-			    <ul id="mensagens-erro" style="display: none;">
-			    	<!--Aque serão colocadas os aviso de erros caso existam-->
-			    </ul>
-			    <form id="form-adiciona">
-			        <div class="grupo">
-			            <label for="nome">Nome:</label>
-			            <input id="nome" name="nome" type="text" placeholder="digite o nome do seu paciente" class="campo">
-			        </div>
-			        <div class="grupo">
-			            <label for="peso">Peso:</label>
-			            <input id="peso" name="peso" type="text" placeholder="digite o peso do seu paciente" class="campo campo-medio">
-			        </div>
-			        <div class="grupo">
-			            <label for="altura">Altura:</label>
-			            <input id="altura" name="altura" type="text" placeholder="digite a altura do seu paciente" class="campo campo-medio">
-			        </div>
-			        <div class="grupo">
-			            <label for="gordura">% de Gordura:</label>
-			            <input id="gordura" type="text" placeholder="digite a porcentagem de gordura do seu paciente" class="campo campo-medio">
-			        </div>
-			        <button id="adicionar-paciente" class="botao bto-principal">Adicionar</button>
-			    </form>
+				<ul id="mensagens-erro" style="display: none;">
+				<!--Aque serão colocadas os aviso de erros caso existam-->
+				</ul>
+				<fieldset>					
+					<form id="form-adiciona">
+						<div class="grupo">
+							<label for="nome">Nome:</label>
+							<input id="nome" name="nome" type="text" placeholder="digite o nome do seu paciente" class="input-form">
+						</div>
+						<div class="grupo">
+							<label for="peso">Peso:</label>
+							<input id="peso" name="peso" type="text" placeholder="digite o peso do seu paciente" class="input-form">
+						</div>
+						<div class="grupo">
+							<label for="altura">Altura:</label>
+							<input id="altura" name="altura" type="text" placeholder="digite a altura do seu paciente" class="input-form">
+						</div>
+						<div class="grupo">
+							<label for="gordura">% de Gordura:</label>
+							<input id="gordura" type="text" placeholder="digite a porcentagem de gordura do seu paciente" class="input-form">
+						</div>
+						<button id="adicionar-paciente">Adicionar</button>
+					</form>
+				</fieldset>
 			</section>
 			<footer>
 				<p>&copy;   Jonathan Sedrez | 2018</p>

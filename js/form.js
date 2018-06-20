@@ -61,10 +61,10 @@ botaoAdicionar.addEventListener("click", function(event){
 		var erros = []; //Cria um array para contatenar os erro e mostratodos juntos
 		
 		//Valida campos em branco
-		if (paciente.nome.length ==0) {erros.push("Nome não pode ficar vazio");}  //Valida se o nome esta vazio
-		if (paciente.gordura.length == 0) {erros.push("Gordura não pode ficar vazia");}  //Valida se a gordura esta vazia
-		if (paciente.peso.length == 0) {erros.push("Peso não pode ficar vazio");}  //Valida se o peso esta vazio
-		if (paciente.altura.length == 0) {erros.push("Altura não pode ficar vazia");}  //Valida se a altura esta vazia
+		if (paciente.nome.length ==0) {erros.push("- Nome não pode ficar vazio");}  //Valida se o nome esta vazio
+		if (paciente.gordura.length == 0) {erros.push("- Gordura não pode ficar vazia");}  //Valida se a gordura esta vazia
+		if (paciente.peso.length == 0) {erros.push("- Peso não pode ficar vazio");}  //Valida se o peso esta vazio
+		if (paciente.altura.length == 0) {erros.push("- Altura não pode ficar vazia");}  //Valida se a altura esta vazia
 		//valida dados fora do padrão
 		if (!validaPeso(paciente.peso)) {erro.push("Peso inválido");}
 		if(!validaAltura(paciente.altura)) {erro.push("Altura inválida")}
