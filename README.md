@@ -1,3 +1,3 @@
 # -Alura-IMC
 
-Javascript project to learn JS with Sass
+A project to practice JavaScript, html, Sass in a responsive website.
