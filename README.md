@@ -1,3 +1,3 @@
 # -Alura-IMC
 
-Code made with alura exercises with notes
+Javascript project to learn JS with Sass
